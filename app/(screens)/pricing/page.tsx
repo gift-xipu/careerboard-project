@@ -4,31 +4,38 @@ import { MdCheckCircleOutline } from 'react-icons/md'
 
 const tiers = [
   {
-    name: 'Hobby',
-    id: 'tier-hobby',
+    name: 'Standard',
+    id: 'tier-standard',
     href: '#',
-    priceMonthly: 'R550', // Changed to ZAR
-    description: "The perfect plan if you're just getting started with our product.",
-    features: ['25 products', 'Up to 10,000 subscribers', 'Advanced analytics', '24-hour support response time'],
+    priceMonthly: 'R350', // Adjusted to ZAR
+    description: "Ideal for individual users looking to create a basic resume and access limited features.",
+    features: [
+      'Create 1 resume',
+      'Access to basic job listings',
+      'Limited access to job application tracking',
+      'Basic customer support',
+    ],
     featured: false,
   },
   {
-    name: 'Enterprise',
-    id: 'tier-enterprise',
+    name: 'Premium',
+    id: 'tier-premium',
     href: '#',
-    priceMonthly: 'R1850', // Changed to ZAR
-    description: 'Dedicated support and infrastructure for your company.',
+    priceMonthly: 'R950', // Adjusted to ZAR
+    description: 'Unlock full access to all features, including advanced resume building, unlimited job applications, and priority support.',
     features: [
-      'Unlimited products',
-      'Unlimited subscribers',
-      'Advanced analytics',
-      'Dedicated support representative',
-      'Marketing automations',
-      'Custom integrations',
+      'Unlimited resumes',
+      'Access to premium job listings',
+      'Advanced job application tracking',
+      'Custom resume templates',
+      'Priority customer support',
+      'API access for integrations',
+      'Job alerts and recommendations',
     ],
     featured: true,
   },
 ]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
