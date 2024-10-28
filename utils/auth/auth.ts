@@ -1,6 +1,14 @@
 import NextAuth from "next-auth"
-import Credentials from "next-auth/providers/credetials" 
+import Credentials from "next-auth/providers/credetials"
+import {db, accounts, sessions, users, verificationTokens} from "@/utils/db/schema.ts"
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  adapters: DrizzleAdpater(db, {
+    usersTable: users,
+    accountsTable: accounts,
+    sessionsTable: sessions,
+    verificationTokensTable: verificationTokens,
+  })
   providers: [
     Credentials({
       credetials: {
@@ -14,4 +22,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       }
     })
   ],
+  pages: {
+    signIn: '/login',
+    signOut: '/signOut',
+    newUser: '/dashboard/newUser'
+  }
 })
