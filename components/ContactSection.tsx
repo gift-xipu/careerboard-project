@@ -11,7 +11,8 @@ const ContactSection = () => {
     setStatus('Thanks! We will notify you when we launch.')
     setEmail('')
   }
-
+//we could create a more dynamic form.
+  ////need to intergrate authentication
   return (
     <section className="w-full py-24 px-4">
       <div className="max-w-4xl mx-auto">
