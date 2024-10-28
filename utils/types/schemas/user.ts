@@ -1,5 +1,6 @@
 import { z } from "zod";
-
+//makes this a readonly, this can not be modified and makes sure a user is either a job seerker or a recruiter before saving to the database
+//
 export const UserType = {
   Recruiter: "recruiter",
   JobSeeker: "job_seeker",
