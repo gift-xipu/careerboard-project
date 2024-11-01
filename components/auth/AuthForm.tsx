@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 
+//these are the types for the prop, since I have the loginSchema, I need to have the name included.
 type AuthFormProps = {
   mode: 'signIn' | 'register';
   onSubmit: (data: { email: string; password: string; name?: string; }) => void;
